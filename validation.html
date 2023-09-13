@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation to the form by own</title>
+    <style>
+        div{
+            margin: auto 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="return validation()" action="dom.html">
+            <fieldset>
+                <legend>SingUp</legend>
+                <input type="text" id="txt" placeholder="UserName" required><br><br>
+                <input type="password" id="password" placeholder="Password" required><br><br>
+                <input type="password" id="re-pass" placeholder="confirm password" required><br><br>
+                <button type="submit" style="background-color: blueviolet;">SignUp</button>
+            </fieldset>
+        </form>
+    </div>    
+    <script>
+        function validation(){
+            let Username= document.getElementById("txt").value
+            let Password= document.getElementById("password").value
+            let confirm_pass=document.getElementById("re-pass").value
+
+            if(Username == "" || Username == null){
+                alert("usrname shouldn't be empty")
+                return false
+            }
+            else if(Password.length < 5){
+                alert("password should contain minimum six charectors")
+                return false
+            }
+            //else if(Username != "Pysider" && Password != 12345678){
+              // alert("incorrect password or Username")
+               // return false
+            //}
+            
+            else if(Password != confirm_pass){
+               alert("password is not matching..")
+               return false
+            }
+            else if(isNaN(Password)){
+                alert("it is not a number")
+                return false
+            
+            }
+            else{
+                alert("account created succesfully...")
+                return true;
+            }
+            
+
+        }
+    </script>
+</body>
+</html>

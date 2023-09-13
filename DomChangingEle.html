@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>changing elements</title>
+</head>
+<body>
+    <div id="first">
+        <p id="ele">
+            this is first paragraph of div1
+        </p>
+        <p id="first-last">
+            this is second paragraph of div1
+        </p>
+       
+       </div>
+       <div id="second">
+        <p>
+            this is first paragraph of div2
+        </p>
+        <p id="last">
+            this is second paragraph of div2
+        </p>
+       
+       </div>
+
+       <script>
+        //removing the elements
+        //let last=document.getElementById('last')
+        //last.remove()
+        //removing element using the parent tag of that ele
+        let parent =document.getElementById('fist')
+        let ele=document.getElementById('ele')
+          parent.removeChild(ele)
+       </script>
+    
+</body>
+</html>

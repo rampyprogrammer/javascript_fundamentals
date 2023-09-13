@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POP_UP</title>
+</head>
+<body>
+    <button onclick="SaveData()">savedata</button>
+    <h1 id="text"></h1>
+    <script>
+       function SaveData(){
+    
+        let msg;
+        if(comfirm("do you want to save tha data?")==true){
+            alert("your data has been saved...")
+            text.style.color='green'
+
+        }
+        else{
+            alert('you data is not saved...')
+            text.style.color='red'
+        }
+        document.getElementById('text').innerHTML=msg
+
+       }
+    </script>
+</body>
+</html>

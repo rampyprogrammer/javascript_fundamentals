@@ -1,0 +1,4 @@
+decide how many values should 
+declare empty obj
+apply for loop-->for(i=1;......)
+insert key using prompt=prompt("enter the value)

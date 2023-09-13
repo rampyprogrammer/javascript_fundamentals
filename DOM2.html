@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h1>h1</h1>
+    <h5>h5</h5>
+    <p>p</p>
+    <p>p</p>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <p>p</p>
+    <h1>h1</h1><br>
+    <button onclick="count()">click to count</button>
+    <p id="a"></p>
+    <p id="b"></p>
+    <p id="c"></p>
+    <p id="d"></p>
+
+    <!-- <p id="msg2"></p> -->
+    <!-- <button onclick="count()">click to count</button> -->
+    <script>
+        function count(){
+            let cnt=document.getElementsByTagName("h1")
+            let cnt1=document.getElementsByTagName("p")
+            let cnt2=document.getElementsByTagName("h2")
+            let cnt3=document.getElementsByTagName("h5")
+            document.getElementById("a").innerHTML="no.of h1 "+cnt.length
+            document.getElementById("b").innerHTML="no.of h2 "+cnt1.length
+            document.getElementById("c").innerHTML="no.of p  "+cnt2.length
+            document.getElementById("d").innerHTML="no.of h5 "+cnt3.length
+        }
+    </script>
+</body>
+</html>

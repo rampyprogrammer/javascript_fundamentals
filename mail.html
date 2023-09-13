@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="x" placeholder="email"><br><br>
+    <button onclick="validat()">check</button>
+    <h1 id="one"></h1>
+
+    <script>
+        function validat(){
+            let x=document.getElementById("x").vlaue
+
+            
+
+            if(x.indexOf("@")<=0){
+                 
+                 document.getElementById("one").innerHTML="invalid email"
+                 one.style.color="red"
+            }
+            else if((x.charAt(x.length-4 )!='.') && (x.charAt(x.length -3)!='.')){
+                document.getElementById("one").innerHTML="invalid email"
+                one.style.color="red"
+            }
+            else{
+                document.getElementById("one").innerHTML='valid Email'
+                one.style.color="green"
+
+            }
+
+            
+        }
+    </script>
+    
+</body>
+</html>

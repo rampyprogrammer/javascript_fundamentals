@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web page</title>
+</head>
+<body>
+    <h1>select your qualification :</h1><br>
+
+    <input type="radio" name="a" id="be"><label for="be">BE</label>
+    <input type="radio" name="a" id="btech"><label for="btech">B.TECH</label>
+    <input type="radio" name="a" id="bca"><label for="bca">BCA</label>
+    <input type="radio" name="a" id="bsc"><label for="bsc">B.Sc</label>
+    <input type="radio" name="a" id="bcom"><label for="bcom">B.COM</label>
+    <input type="radio" name="a" id="bba"><label for="bba">BBA</label>
+    <input type="radio" name="a" id="mba"><label for="mba">MBA</label>
+    <input type="radio" name="a" id="mtech"><label for="mtech">M.TECH</label>
+    <input type="radio" name="a" id="mca"><label for="mca">MCA</label>
+    <input type="radio" name="a" id="msc"><label for="msc">MSC</label><br>
+    <button onclick="count()">click to cuont</button>
+    <p id="msg"></p>
+    <script>
+        function count(){
+            let cnt=document.getElementsByName("a")
+            document.getElementById("msg").innerHTML="num of courses : "+cnt.length
+
+        }
+    </script>
+</body>
+</html>

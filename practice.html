@@ -1,0 +1,72 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>select your courses :</h1>
+    <input type="radio" name="a" id="be"><label for="be">BE</label>
+    <input type="radio" name="a" id="mca"><label for="mca">MCA</label>
+    <input type="radio" name="a" id="mtech"><label for="mtech">M.TECH</label>
+    <input type="radio" name="a" id="msc"><label for="msc">M.SC</label>
+    <input type="radio" name="a" id="bba"><label for="bba">BBA</label>
+    <input type="radio" name="a" id="btech"><label for="btech">B.TECH</label>
+    <input type="radio" name="a" id="bsc"><label for="bsc">B.SC</label>
+    <input type="radio" name="a" id="bcom"><label for="bcom">B.COM</label>
+    <input type="radio" name="a" id="mba"><label for="mba">MBA</label>
+    <input type="radio" name="a" id="mcom"><label for="mcom">M.COM</label><br>
+    <button ondblclick="count()">count</button>
+    <p id="msg"></p>
+    <script>
+        function count(){
+            let cnt=document.getElementsByName("a")
+            document.getElementById("msg").innerHTML="no of courses are "+cnt.length
+        }
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>domgetByTagName</title>
+</head>
+<body>
+    <h1>h1</h1>
+    <p>p</p>
+    <h2>h2</h2>
+    <h1>h1</h1>
+    <h3>h3</h3>
+    <p>p</p>
+    <h1>h1</h1>
+    <h5>h5</h5>
+    <h3>h3</h3>
+    <h3>h3</h3>
+    <button ondblclick="count()">doubleclick</button>
+    
+    <p id="a"></p>
+    <p id="b"></p>
+    <p id="c"></p>
+    <p id="d"></p>
+    <p id="e"></p>
+    <script>
+        function count(){
+            let cnt1=document.getElementsByTagName("h1")
+            let cnt2=document.getElementsByTagName("h2")
+            let cnt3=document.getElementsByTagName("p")
+            let cnt4=document.getElementsByTagName("h5")
+            let cnt5=document.getElementsByTagName("h3")
+            document.getElementById("a").innerHTML="no of h1's is : "+cnt1.length
+            document.getElementById("b").innerHTML="no of p's is : "+cnt2.length
+            document.getElementById("c").innerHTML="no of h2's is : "+cnt3.length
+            document.getElementById("d").innerHTML="no of h5's is : "+cnt4.length
+            document.getElementById("e ").innerHTML="no of h3's is : "+cnt5.length
+        }
+    </script>
+</body>
+</html>

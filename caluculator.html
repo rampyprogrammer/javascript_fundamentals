@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a simple caluculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background:#e3f9ff ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .caluculator{
+            background:#3a4452 ;
+            padding: 20px;
+            border-radius: 10px
+        }
+        .caluculator form input{
+            border: 0;
+            outline: 0;
+            background: #5c27ab;
+            width: 60px;
+            height: 60px;
+            box-shadow: -8px -8px 15px rgb(185, 180, 196);
+            font-size: 20px;
+            cursor: pointer;
+            margin: 2px;
+            border-radius: 5px;
+            color:white;
+            
+        }
+
+        .caluculator form .text{
+            width: 100%;
+            position: relative;
+            text-align: right;
+            
+        } 
+        .caluculator form input.wide{
+            width: 126px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caluculator">
+            <form action="">
+                <div class="text">
+                    <input  class="text" style="color: black;" type="text" id="res">
+                </div>
+                <div class="size">
+                    <input type="button" value="C" onclick="clear()">
+                    <input type="button" value="%" onclick="solve('%')">
+                    <input type="button" value="&#129056;" onclick="back('')">
+                    <!-- <input type="button" value="/" onclick="solve('/')"> -->
+                    <input type="button" value="/" onclick="solve('/')">
+
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="solve('7')">
+                    <input type="button" value="8" onclick="solve('8')">
+                    <input type="button" value="9" onclick="solve('9')">
+                    <input type="button" value="-" onclick="solve('-')">
+
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="solve('4')">
+                    <input type="button" value="5" onclick="solve('5')">
+                    <input type="button" value="6" onclick="solve('6')">
+                    <input type="button" value="+" onclick="solve('+')">
+
+                </div>
+                <div>
+                     <input type="button" value="1" onclick="solve('1')">
+                    <input type="button" value="2" onclick="solve('2')">
+                    <input type="button" value="3" onclick="solve('3')">
+                    <input type="button" value="*" onclick="solve('*')">
+
+                </div>
+                <div>
+                    <input type="button" value="0" onclick="solve('0')">
+                    <input type="button" value="00" onclick="solve('00')">
+                    <input type="button" value="=" class="wide" onclick="result()">
+                   
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        function solve(val){
+        let v= document.getElementById("res").value+=val
+        }
+        function result(){
+            let num1=document.getElementById("res").value
+            let num2= eval(num1)
+            document.getElementById('res').value=num2
+
+        }
+        function clear(){
+            document.getElementById("res").value=''
+        }
+        function back(){
+            let dVal=document.getElementById("res")
+            dVal.value=dVal.value.slice(0,-1)
+        }
+
+
+    </script>
+</body>
+</html>

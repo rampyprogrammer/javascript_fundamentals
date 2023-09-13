@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        form{
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-left: 200px;
+            margin-right: 200px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Validation</h1>
+    <form action="jack.html" onsubmit="return validate()">
+    <fieldset>
+        <legend>Login</legend>
+            User name :<input type="text" name="" value="" id="Name"><br><br>
+            password :<input type="password" name="" value="" id="pswd"><br><br>
+            <button type="submit" >Login</button>
+        
+    </fieldset>
+    
+    </form>
+    <script>
+        function validate(){
+            //fetch value from input, username and password
+            let name=document.getElementById("Name").value 
+            let password=document.getElementById("pswd").value 
+            let username = "Pyspider"
+            let Password =123456
+            if(name=='' || name==null){
+                alert("user name shoudn't be empty")
+                return false
+
+            }
+            else if(password.length < 5){
+                alert("password should cantain atleast 6 charectors")
+                return false
+            
+            
+            }
+            else if(name != username){
+                alert("incorrect username or password")
+                return false
+
+            }
+            else if(password != Password){
+                alert("incorrect username or password")
+                return false
+            }
+            else{
+                alert("validation is succesfull...")
+                return true
+            }
+        }
+    </script>
+</body>
+</html>
